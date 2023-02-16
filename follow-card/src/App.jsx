@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './App.css'
 import { TwitterFollowCard } from './TwitterFollowCard'
 
@@ -26,7 +25,6 @@ const users = [
 ]
 
 export function App () {
-  const [count, setCount] = useState(0)
   return (
     <section className='App'>
       {
@@ -43,7 +41,6 @@ export function App () {
           )
         })
       }
-      <button onClick={() => setCount(count + 1)}>Count {count}</button>
     </section>
   )
 }
