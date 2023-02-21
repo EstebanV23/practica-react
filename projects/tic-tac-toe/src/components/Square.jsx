@@ -9,6 +9,6 @@ const Square = ({ children, isSelected, updateBoard, index }) => {
       {children}
     </div>
   )
-} 
+}
 
 export default Square

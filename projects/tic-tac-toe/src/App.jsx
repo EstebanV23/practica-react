@@ -1,17 +1,17 @@
-import { useState } from "react"
+import { useState } from 'react'
 import confetti from 'canvas-confetti'
 
-import Square from "./components/Square"
-import Modal from "./components/Modal"
+import Square from './components/Square'
+import Modal from './components/Modal'
 
 import { TURNS } from './constans'
-import { checkEndGame, checkWinner } from "./logic/board"
+import { checkEndGame, checkWinner } from './logic/board'
 
-function App() {
+function App () {
   const [board, setBoard] = useState(() => {
     const boardFromStorage = window.localStorage.getItem('board')
-    return boardFromStorage 
-      ? JSON.parse(boardFromStorage) 
+    return boardFromStorage
+      ? JSON.parse(boardFromStorage)
       : Array(9).fill(null)
   })
 
@@ -32,9 +32,9 @@ function App() {
   }
 
   const updateBoard = (index) => {
-    //Si ya tiene algo o si hay ya un ganador
-    if(board[index] || winner) return
-  
+    // Si ya tiene algo o si hay ya un ganador
+    if (board[index] || winner) return
+
     const newBoard = [...board]
     newBoard[index] = turn // x or o
     setBoard(newBoard)
@@ -45,7 +45,7 @@ function App() {
     // Guardar con localStorage el estado de la partida
     window.localStorage.setItem('board', JSON.stringify(newBoard))
     window.localStorage.setItem('turn', newTurn)
-  
+
     const newWinner = checkWinner(newBoard)
     if (newWinner) {
       setWinner(newWinner)
@@ -54,7 +54,7 @@ function App() {
       setWinner(false) // Actualiza a empate
     }
   }
-  
+
   return (
     <>
       <main className='board'>
@@ -64,7 +64,7 @@ function App() {
           {
             board.map((_, index) => {
               return (
-                <Square 
+                <Square
                   key={index}
                   index={index}
                   updateBoard={updateBoard}

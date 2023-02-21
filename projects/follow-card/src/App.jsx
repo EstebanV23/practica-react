@@ -21,7 +21,7 @@ const users = [
     userName: 'mafezabala',
     name: 'Fernanda Zabala Arciniegas',
     initialIsFollowing: true
-  },
+  }
 ]
 
 export function App () {

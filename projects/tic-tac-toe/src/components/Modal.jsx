@@ -1,8 +1,8 @@
-import Square from "./Square"
+import Square from './Square'
 
-export default function Modal ({winner, resetGame}) {
+export default function Modal ({ winner, resetGame }) {
   if (winner === null) return null
-  const text = winner === false ? 'Draw' : 'Winner:' 
+  const text = winner === false ? 'Draw' : 'Winner:'
   return (
     <section className="winner">
       <div className="text">
