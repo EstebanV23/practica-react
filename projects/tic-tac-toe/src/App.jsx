@@ -60,7 +60,7 @@ function App () {
       <main className='board'>
         <h1>Tic tac toe</h1>
         <button onClick={resetGame}>Restart Game</button>
-        <section className="game">
+        <section className='game'>
           {
             board.map((_, index) => {
               return (
@@ -76,12 +76,12 @@ function App () {
           }
         </section>
 
-        <section className="turn">
+        <section className='turn'>
           <Square isSelected={turn === TURNS.X}>{TURNS.X}</Square>
           <Square isSelected={turn === TURNS.O}>{TURNS.O}</Square>
         </section>
 
-        <Modal winner={winner} resetGame={resetGame}/>
+        <Modal winner={winner} resetGame={resetGame} />
       </main>
     </>
   )

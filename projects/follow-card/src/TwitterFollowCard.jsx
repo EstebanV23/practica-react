@@ -16,7 +16,7 @@ export function TwitterFollowCard ({ children, userName, initialIsFollow }) {
       <header className='tw-followCard-header'>
         <img
           src={urlImage}
-          alt="Here be avatar"
+          alt='Here be avatar'
           className='tw-followCard-avatar'
         />
         <div className='tw-followCard-info'>
@@ -29,8 +29,8 @@ export function TwitterFollowCard ({ children, userName, initialIsFollow }) {
 
       <aside>
         <button className={`tw-followCard-button ${buttonClassName}`} onClick={handleClick}>
-          <span className="tw-followCard-Follow">{text}</span>
-          <span className="tw-followCard-stopFollow">Dejar de seguir</span>
+          <span className='tw-followCard-Follow'>{text}</span>
+          <span className='tw-followCard-stopFollow'>Dejar de seguir</span>
         </button>
       </aside>
     </article>
