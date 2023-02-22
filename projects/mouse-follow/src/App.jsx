@@ -11,7 +11,7 @@ function App () {
       setPosition({ x: clientX, y: clientY })
     }
 
-    enabled && window.addEventListener('pointermove', handleMove) // Si esta en enabled se ejecutará el eventListener
+    enabled && window.addEventListener('pointermove', handleMove) // Si esta en enabled se suscribirá a el evento
 
     // Se ejecuta al principio, cuando se monta o desmonta el componente, y al cambiar su dependencia que en este caso es el enabled
     return () => {
